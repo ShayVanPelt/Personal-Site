@@ -62,8 +62,8 @@ export const ProjectsSection = () => {
               </div>
               <hr className="border-t-2 border-white/50 mt-4"/>
               <ul className="flex flex-col gap-4 mt-4">
-                {project.info.map((info) => (
-                  <li className="flex gap-2 text-sm md:text-lg text-white/80">
+                {project.info.map((info, index) => (
+                  <li key={index} className="flex gap-2 text-sm md:text-lg text-white/80">
                     <CheckCircleIcon className="size-3"/>
                     <span>{info.info}</span>
                   </li>
