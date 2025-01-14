@@ -14,7 +14,7 @@ export const Header = () => {
         <Link href="#projects" className="nav-item">
           Projects
         </Link>
-        <Link href="#contact" className="nav-item bg-white text-blue-900 hover:bg-white/65 hover:text-blue-900">
+        <Link href="#contact" className="nav-item bg-white text-purple-600 hover:bg-white/65 hover:text-purple-800">
           Contact
         </Link>
     </nav>
