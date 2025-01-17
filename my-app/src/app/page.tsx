@@ -8,12 +8,12 @@ import { Footer } from "@/sections/Footer";
 export default function Home() {
   return (
     <div>
-      <Header/>
-      <AboutSection/>
-      <WorkSection/>
-      <ProjectsSection/>
-      <ContactSection/>
-      <Footer/>
+      <Header />
+      <AboutSection />
+      <WorkSection />
+      <ProjectsSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 }
