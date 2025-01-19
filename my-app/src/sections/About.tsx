@@ -96,16 +96,16 @@ export const AboutSection = () => {
               href="#portfolio"
               className="inline-flex items-center gap-2 justify-center bg-purple-600 text-white text-sm md:text-base py-2 px-5 rounded-lg shadow hover:bg-purple-800 transition-all"
             >
-              Download Resusme
+              Download Resume
               <HiDownload />
             </a>
           </div>
         </div>
-        <div className="py-20">
+        <div className="pt-20">
           <Card className="h-[320px] p-0">
             <CardHeader
               title="My Toolbox"
-              description="technical skills I am familialr with"
+              description="Software tools I have experience with"
               className="flex items-center px-6 pt-6"
             ></CardHeader>
             <div>

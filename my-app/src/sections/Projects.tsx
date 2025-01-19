@@ -3,6 +3,7 @@ import mapimage from "@/assets/images/map.png";
 import DRimage from "@/assets/images/dr.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
+import CircleIcon from "@/assets/icons/circle-white.svg";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 import { Result } from "postcss";
 
@@ -57,12 +58,15 @@ export const ProjectsSection = () => {
           List of personal projects completed
         </p>
         <div className="flex md:mt-20 flex-col mt-10 gap-14">
-          {portfolioProjects.map((project) => (
+          {portfolioProjects.map((project, projectIndex) => (
             <div
               key={project.title}
-              className="bg-neutral-700 rounded-3xl relative z-0 overflow-hidden 
+              className="bg-neutral-700 rounded-3xl lg:px-20 lg:pt-16  z-0 overflow-hidden 
             after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline 
-            after:-outline-offset-2 after:rounded-3xl after:outline-white/20 p-8 after:pointer-events-none"
+            after:-outline-offset-2 after:rounded-3xl after:outline-white/20 p-8 after:pointer-events-none sticky"
+              style={{
+                top: `calc(64px + ${projectIndex * 40}px)`, // Ensure this is interpolated correctly
+              }}
             >
               <div>
                 <h3 className="font-serif text-2xl md:text-4xl ">
@@ -74,9 +78,9 @@ export const ProjectsSection = () => {
                 {project.info.map((info, index) => (
                   <li
                     key={index}
-                    className="flex gap-2 text-sm md:text-lg text-white/80"
+                    className="flex items-center gap-2 text-sm md:text-lg text-white/80"
                   >
-                    <CheckCircleIcon className="size-3" />
+                    <CircleIcon className="size-3" />
                     <span>{info.info}</span>
                   </li>
                 ))}
