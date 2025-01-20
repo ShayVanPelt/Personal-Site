@@ -44,7 +44,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="pb-16">
+    <section id="projects" className="pb-48">
       <div className="container">
         <div className="flex justify-center">
           <h1
@@ -86,7 +86,7 @@ export const ProjectsSection = () => {
                 ))}
               </ul>
               <a href={project.link}>
-                <button className="bg-white h-12 w-full font-semibold md:text-lg rounded-xl text-purple-800 hover:bg-white/65 hover:text-purple-900 inline-flex items-center justify-center gap-2 mt-8">
+                <button className="bg-white h-12 w-full font-semibold md:text-lg rounded-xl text-purple-800 hover:bg-white/65 hover:text-purple-900 hover:scale-105 transition-all inline-flex items-center justify-center gap-2 mt-8">
                   <span>View on Github</span>
                   <ArrowUpRight className="size-4" />
                 </button>

@@ -94,7 +94,7 @@ export const AboutSection = () => {
           <div className="mt-8">
             <a
               href="#portfolio"
-              className="inline-flex items-center gap-2 justify-center bg-purple-600 text-white text-sm md:text-base py-2 px-5 rounded-lg shadow hover:bg-purple-800 transition-all"
+              className="inline-flex items-center gap-2 justify-center bg-purple-600 text-white text-sm md:text-base py-2 px-5 rounded-lg shadow hover:bg-purple-800 hover:scale-105 transition-all"
             >
               Download Resume
               <HiDownload />

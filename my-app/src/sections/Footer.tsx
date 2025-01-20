@@ -26,7 +26,7 @@ export const Footer = () => {
                 <a
                   href={link.href}
                   key={link.title}
-                  className="inline-flex items-center gap-1.5 text-white hover:text-purple-400 "
+                  className="inline-flex items-center gap-1.5 text-white hover:text-purple-400 hover:scale-105 transition-all"
                   target="_blank"
                 >
                   <span className="font-semibold">{link.title}</span>

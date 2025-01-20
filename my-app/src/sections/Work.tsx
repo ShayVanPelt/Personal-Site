@@ -5,22 +5,6 @@ import CirclePIcon from "@/assets/icons/circle-purple.svg";
 
 const workExperience = [
   {
-    title: "Software Developer Co-op (Python)",
-    company: "University of Victoria, Department of Civil Engineering",
-    date: "09/2021 - 12/2021",
-    info: [
-      {
-        info: "Created dashboards that display information for graduate students using Dash and React.",
-      },
-      {
-        info: "Used Git version control software to deal with merge conflicts.",
-      },
-      {
-        info: "Created an API that downloaded zips with all data relating to technical information for each country or province.",
-      },
-    ],
-  },
-  {
     title: "Full Stack Co-op",
     company: "Certispec Services Inc.",
     date: "01/2024 - 04/2024",
@@ -39,11 +23,27 @@ const workExperience = [
       },
     ],
   },
+  {
+    title: "Software Developer Co-op (Python)",
+    company: "University of Victoria, Department of Civil Engineering",
+    date: "09/2021 - 12/2021",
+    info: [
+      {
+        info: "Created dashboards that display information for graduate students using Dash and React.",
+      },
+      {
+        info: "Used Git version control software to deal with merge conflicts.",
+      },
+      {
+        info: "Created an API that downloaded zips with all data relating to technical information for each country or province.",
+      },
+    ],
+  },
 ];
 
 export const WorkSection = () => {
   return (
-    <div id="experience" className="pb-32">
+    <div id="experience" className="pb-48">
       <SectionHeader
         eyebrow="Work Experience"
         title="All software development work experience"

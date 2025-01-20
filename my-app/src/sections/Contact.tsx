@@ -6,7 +6,7 @@ export const ContactSection = () => {
       <div className="container">
         <SectionHeader
           eyebrow="Contact"
-          title="Contact me here to get in touch"
+          title="Contact me at shayvanpelt05@gmail.com to get in touch"
         ></SectionHeader>
       </div>
     </div>
