@@ -93,10 +93,12 @@ export const AboutSection = () => {
           </p>
           <div className="mt-8">
             <a
-              href="#portfolio"
+              href="/resume.pdf"
               className="inline-flex items-center gap-2 justify-center bg-purple-600 text-white text-sm md:text-base py-2 px-5 rounded-lg shadow hover:bg-purple-800 hover:scale-105 transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Download Resume
+              View Resume
               <HiDownload />
             </a>
           </div>

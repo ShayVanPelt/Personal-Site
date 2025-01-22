@@ -7,19 +7,25 @@ const workExperience = [
   {
     title: "Full Stack Co-op",
     company: "Certispec Services Inc.",
-    date: "01/2024 - 04/2024",
+    date: "01/2025 - 04/2025",
     info: [
       {
-        info: "Designed and maintained responsive front-end UIs using Next.js",
+        info: "Designed responsive front-end user interfaces with Next.js.",
       },
       {
-        info: "Developed and optimized PostgreSQL queries for data management.",
+        info: "Managed application states using Zustand, hooks and local states.",
       },
       {
-        info: "Created and modified REST API endpoints to support application features.",
+        info: "Optimized API endpoints through implementation of pagination for large datasets.",
       },
       {
-        info: "Implemented new features, resolved bugs, and ensured code quality through comprehensive testing.",
+        info: "Developed complex queries for PostgreSQL databases, leveraging JSONB for efficient data storage and retrieval.",
+      },
+      {
+        info: "Developed and secured REST API endpoints using OAuth token handling and validation.",
+      },
+      {
+        info: "Resolved bugs, implemented front-end components, and developed backend features to complete project tickets efficiently.",
       },
     ],
   },
@@ -67,7 +73,7 @@ export const WorkSection = () => {
                     key={index}
                     className="flex items-center gap-2 text-sm md:text-lg text-white/80"
                   >
-                    <CircleIcon className="size-3" />
+                    <CircleIcon className="size-3 flex-shrink-0" />
                     <span>{info.info}</span>
                   </li>
                 ))}
