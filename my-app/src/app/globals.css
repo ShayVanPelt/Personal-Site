@@ -7,7 +7,41 @@ html {
 }
 
 @layer base {
+  body {
+    @apply bg-surface text-stone-100;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-stone-50;
+  }
+}
+
+@layer components {
   .nav-item {
-    @apply px-3 py-1.5 rounded-full text-white text-sm font-semibold hover:bg-white/10 hover:text-white transition duration-300;
+    @apply px-3 py-1.5 rounded-full text-stone-300 text-sm font-medium hover:bg-white/10 hover:text-stone-50 transition duration-200;
+  }
+
+  .nav-item-active {
+    @apply bg-accent-dim text-accent border border-accent/25;
+  }
+
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-accent;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl text-stone-50 tracking-tight;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-w-0 items-center justify-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(147,51,234,0.35)] transition hover:bg-purple-500 hover:shadow-[0_0_32px_rgba(147,51,234,0.45)];
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-w-0 items-center justify-center gap-2 rounded-full border border-stone-600/60 bg-surface-raised/80 px-5 py-2.5 text-sm font-semibold text-stone-200 backdrop-blur transition hover:border-stone-500 hover:bg-stone-800/80;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-surface-border bg-surface-raised/80 backdrop-blur-sm;
   }
 }

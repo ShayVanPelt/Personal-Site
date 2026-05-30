@@ -1,25 +1,27 @@
 import Link from "next/link";
+import { navItems } from "@/data/site";
 
 export const Header = () => {
   return (
-    <div className="flex justify-center items-center fixed top-3 w-full z-20">
-      <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
-        <Link href="#home" className="nav-item">
-          Home
-        </Link>
-        <Link href="#experience" className="nav-item">
-          Experience
-        </Link>
-        <Link href="#projects" className="nav-item">
-          Projects
-        </Link>
-        <Link
-          href="#contact"
-          className="nav-item bg-white text-purple-600 hover:bg-white/65 hover:text-purple-800"
-        >
-          Contact
-        </Link>
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
+      <nav
+        className="flex max-w-[calc(100vw-2rem)] items-center gap-0.5 overflow-x-auto rounded-full border border-surface-border bg-surface/90 p-1 backdrop-blur-md shadow-lg shadow-black/20 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        aria-label="Main"
+      >
+        {navItems.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={
+              item.href === "#contact"
+                ? "nav-item shrink-0 bg-accent text-white hover:bg-purple-500 hover:text-white font-semibold"
+                : "nav-item shrink-0"
+            }
+          >
+            {item.label}
+          </Link>
+        ))}
       </nav>
-    </div>
+    </header>
   );
 };

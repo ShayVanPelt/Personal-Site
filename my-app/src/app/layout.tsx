@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
-import { Inter, Calistoga } from "next/font/google";
+import { IBM_Plex_Sans, Syne } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const calistoga = Calistoga({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-serif",
-  weight: ["400"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600"],
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "SVP Portfolio",
-  description: "Created with next.js",
+  title: "Shay Van Pelt — Software Engineer",
+  description:
+    "Portfolio of Shay Van Pelt — Software Engineering student at UVic. Full-stack development, QA automation, and personal projects.",
 };
 
 export default function RootLayout({
@@ -24,11 +30,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={twMerge(
-          inter.variable,
-          calistoga.variable,
-          "bg-neutral-900 text-white antialiased font-sans"
+          ibmPlexSans.variable,
+          syne.variable,
+          "font-sans antialiased"
         )}
       >
+        <div className="pointer-events-none fixed inset-0 -z-10 bg-grid-pattern bg-grid opacity-40" />
+        <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(147,51,234,0.15),transparent)]" />
         {children}
       </body>
     </html>

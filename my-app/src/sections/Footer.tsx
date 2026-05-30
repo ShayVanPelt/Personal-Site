@@ -1,40 +1,34 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import { site } from "@/data/site";
 
-const footerlinks = [
-  {
-    title: "LinkedIn",
-    href: "https://www.linkedin.com/in/shay-van-pelt-273592301/",
-  },
-  {
-    title: "GitHub",
-    href: "https://github.com/ShayVanPelt",
-  },
+const footerLinks = [
+  { title: "LinkedIn", href: site.social.linkedin },
+  { title: "GitHub", href: site.social.github },
+  { title: "Resume", href: site.resumePath },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="relative overflow-x-clip">
-      <div className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-purple-900/40 [mask-image:radial-gradient(50%_50%_at_bottom_center,black,transparent)] -z-10"></div>
+    <footer className="pb-8">
       <div className="container">
-        <div className="border-t border-white/25 py-6 text-sm flex flex-col md:flex-row md:justify-between items-center gap-8">
-          <div className="text-white/50">
-            Designed & Built by Shay Van Pelt.
-          </div>
-          <div>
-            <nav className="flex flex-col md:flex-row items-center gap-8">
-              {footerlinks.map((link) => (
-                <a
-                  href={link.href}
-                  key={link.title}
-                  className="inline-flex items-center gap-1.5 text-white hover:text-purple-400 hover:scale-105 transition-all"
-                  target="_blank"
-                >
-                  <span className="font-semibold">{link.title}</span>
-                  <ArrowUpRightIcon className="size-4 pointer-events-none"></ArrowUpRightIcon>
-                </a>
-              ))}
-            </nav>
-          </div>
+        <div className="flex flex-col items-center gap-6 border-t border-surface-border py-8 text-sm md:flex-row md:justify-between">
+          <p className="text-stone-500">
+            © {new Date().getFullYear()} {site.name}. Built with Next.js.
+          </p>
+          <nav className="flex flex-wrap items-center justify-center gap-6">
+            {footerLinks.map((link) => (
+              <a
+                href={link.href}
+                key={link.title}
+                className="inline-flex items-center gap-1.5 font-medium text-stone-400 transition hover:text-accent"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>{link.title}</span>
+                <ArrowUpRightIcon className="size-3.5" />
+              </a>
+            ))}
+          </nav>
         </div>
       </div>
     </footer>

@@ -16,23 +16,23 @@ export const ToolboxItems = ({
   return (
     <div
       className={twMerge(
-        "flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]",
+        "flex [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]",
         className
       )}
     >
       <div
         className={twMerge(
-          "flex flex-none py-0.5 gap-6 pr-6",
+          "flex flex-none gap-4 pr-4",
           itemWrapperClassName
         )}
       >
-        {toolboxItems.map((item) => (
+        {toolboxItems.map((item, index) => (
           <div
-            key={item.title}
-            className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/20 rounded-lg"
+            key={`${item.title}-${index}`}
+            className="inline-flex items-center gap-3 rounded-xl border border-surface-border bg-stone-900/50 px-3 py-2"
           >
             <TechIcon component={item.icon} />
-            <span className="font-semibold ">{item.title}</span>
+            <span className="text-sm font-medium text-stone-300">{item.title}</span>
           </div>
         ))}
       </div>
