@@ -11,7 +11,7 @@ export const ContactSection = () => {
           <SectionHeader
             eyebrow="Contact"
             title="Let's connect"
-            description="Open to co-op opportunities, collaborations, and conversations about software."
+            description={site.contactDescription}
             align="center"
           />
           <div className="relative z-10 mx-auto mt-8 flex w-full max-w-sm flex-col gap-3 md:max-w-none md:flex-row md:justify-center">

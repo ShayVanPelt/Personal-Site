@@ -4,7 +4,9 @@ export const site = {
   email: "shayvanpelt05@gmail.com",
   phone: "(250) 507-8318",
   intro:
-    "Fourth-year Software Engineering student at the University of Victoria, graduating August 2026. I build reliable full-stack products, automate QA workflows, and ship features with strong test coverage.",
+    "Fourth-year Software Engineering student at the University of Victoria, graduating August 2026. I'm seeking full-time software roles where I can build reliable full-stack products, strengthen QA automation, and ship well-tested features.",
+  contactDescription:
+    "Open to full-time software positions, collaborations, and conversations about building great products.",
   resumePath: "/resume.pdf",
   mailtoHref: "mailto:shayvanpelt05@gmail.com",
   gmailComposeHref:
