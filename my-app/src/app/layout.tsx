@@ -16,7 +16,7 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Shay Van Pelt — Software Engineer",
+  title: "Shay Van Pelt",
   description:
     "Portfolio of Shay Van Pelt — Software Engineering student at UVic. Full-stack development, QA automation, and personal projects.",
 };
